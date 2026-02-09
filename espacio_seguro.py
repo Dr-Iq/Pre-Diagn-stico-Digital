@@ -17,7 +17,16 @@ st.markdown("""
     }
     .stButton>button:hover { background-color: #0056b3; }
     h1 { color: #2c3e50; text-align: center; }
-    .info-box { background-color: #e8f4f8; padding: 15px; border-radius: 10px; border-left: 5px solid #00a8cc; margin-bottom: 20px; }
+    
+    /* CORRECCIÓN AQUÍ: Forzamos el color del texto a NEGRO (#000000) */
+    .info-box { 
+        background-color: #e8f4f8; 
+        color: #000000; 
+        padding: 15px; 
+        border-radius: 10px; 
+        border-left: 5px solid #00a8cc; 
+        margin-bottom: 20px; 
+    }
     </style>
 """, unsafe_allow_html=True)
 
@@ -149,7 +158,7 @@ if st.button("✅ VER RESULTADOS Y OPCIONES"):
         if envio: msg += " 📦 ME INTERESA EL ENVÍO A DOMICILIO."
         else: msg += " Solicito información de tratamiento."
         
-        # TU NÚMERO SIGUE AQUÍ, PERO EL PACIENTE VE "CONTACTAR ESPECIALISTA"
+        # TU NÚMERO SIGUE AQUÍ
         link = f"https://wa.me/522462102267?text={msg.replace(' ', '%20')}"
         
         st.markdown(f"""
